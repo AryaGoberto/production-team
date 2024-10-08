@@ -17,7 +17,6 @@ carouselContainer.addEventListener("scroll", () => {
   });
 });
 
-
 const toggleArrows = document.querySelectorAll(".toggleArrow");
 const companyDetails = document.querySelectorAll(".companyDetails");
 
@@ -37,3 +36,4 @@ toggleArrows.forEach((arrow, index) => {
   });
 });
 
+AOS.init();

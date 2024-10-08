@@ -17,13 +17,18 @@
     />
 
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body class="bg-black">
     <header
-      class="container bg-black w-full flex items-center py-6 px-7 justify-between top-0 z-50 fixed"
+      class="container bg-black max-w-full flex items-center py-6 px-7 justify-between top-0 z-50 fixed md:px-12 md:py-8 lg:px-16 lg:py-6 font-inter "
     >
       <div class="logo">
-        <img src="./img/logo/Logo_GIA Logo White.png" alt="" class="w-1/2" />
+        <img
+          src="./img/logo/Logo_GIA Logo White.png"
+          alt=""
+          class="w-1/2 md:w-1/4 lg:w-1/6"
+        />
       </div>
       <div
         class="w-11 h-11 bg-purple rounded-xl flex items-center justify-center flex-col min-w-3 lg:hidden"
@@ -32,17 +37,38 @@
         <span class="hamburger-line block w-6 h-1 bg-white mb-1"></span>
         <span class="hamburger-line block w-6 h-1 bg-white"></span>
       </div>
+      <nav
+        class="hidden lg:flex items-center justify-center text-white font-inter text-md font-bold"
+      >
+        <ul class="flex gap-10">
+          <li>
+            <a href="#" class="hover:text-indigo-400 whitespace-nowrap"
+              >About Us</a
+            >
+          </li>
+          <li><a href="#" class="hover:text-indigo-400">Contact</a></li>
+          <li><a href="#" class="hover:text-indigo-400">Content</a></li>
+          <li><a href="#" class="hover:text-indigo-400">Member</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- welome start -->
-    <section id="home" class="relative mt-[80px]">
-      <div class="absolute flex flex-col w-full z-10 mx-auto gap-4 mt-12">
+    <section
+      id="home"
+      class="relative mt-[80px] max-w-full  overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 flex flex-col z-10 mx-auto gap-4 mt-12 md:mt-28 items-center w-full"
+      >
         <img
           src="./img/logo/Logo_Full Logo Black.png"
           alt=""
-          class="w-3/4 mx-auto"
+          class="w-3/4 mx-auto md:w-3/6 lg:w-2/6 lg:mt-5 bg-auto"
         />
-        <p class="font-junge text-center w-5/6 mx-auto text-base">
+        <p
+          class="font-junge text-center md:text-lg lg:text-xl lg:w-3/5 w-5/6 mx-auto text-sm"
+        >
           Illuminating faith through creativity, we serve to inspire and connect
           hearts in worship. With every visual and sound, we bring the message
           of hope and love to life.
@@ -50,83 +76,118 @@
         <div
           class="flex mx-auto bg-transparent border-[2px] border-black rounded-full px-4 py-2"
         >
-          <span class="font-inter font-bold">Explore Us</span>
+          <span class="font-inter font-semibold text-sm">Explore Us</span>
         </div>
       </div>
-      <img src="./img/foto/test foto.jpg" alt="" class="w-full" />
+      <!-- untuk mobile -->
+      <img
+        src="./img/foto/mobile.jpg"
+        alt=""
+        class="w-full h-auto max-w-full md:hidden"
+        style="object-position: top center"
+      />
+      <!-- untuk tab -->
+      <img src="./img/foto/tbb - Copy.jpg" alt="" class="hidden md:block lg:hidden" />
+      <img src="./img/foto/dess.jpg" alt="" class="hidden md:hidden lg:block">
     </section>
+
     <!-- welome end -->
 
     <!-- Vision mission start -->
-    <section class="mt-3 container py-6 px-7">
-      <div class="flex flex-col gap-3 text-left">
+    <div
+      class="mt-3 container py-6 px-7 max-w-full md:px-12 md:py-8 lg:px-16 lg:py-9 lg:mt-3 "
+    >
+      <div
+        class="flex flex-col gap-3 text-left md:border-solid border-2 border-indigo-600 md:w-1/2"
+        data-aos="fade-right"
+      >
         <h3
-          class="text-white uppercase text-2xl font-inter font-bold tracking-wider"
+          class="text-white uppercase text-2xl font-inter font-bold tracking-wider lg:text-3xl"
         >
           VISION
         </h3>
-        <p class="text-white font-junge w-5/6">
+        <p class="text-white font-junge w-5/6 lg:text-lg">
           To be a multimedia team that blesses and reaches souls through online
           ministry.
         </p>
       </div>
 
-      <div class="flex flex-col gap-3 text-right items-end mt-8">
+      <div
+        class="flex flex-col gap-3 text-right items-end mt-8 md:border-solid border-2 border-indigo-600 max-w-full md:w-1/2 ml-auto"
+        data-aos="fade-left"
+      >
         <h3
-          class="text-white uppercase text-2xl font-inter font-bold tracking-wider text-right"
+          class="text-white uppercase text-2xl font-inter font-bold tracking-wider text-right lg:text-3xl"
         >
-          MISSIon
+          MISSION
         </h3>
-        <p class="text-white font-junge text-right w-5/6">
+        <p class="text-white font-junge text-right w-5/6 lg:text-lg">
           Provide high-quality multimedia support and Foster a passionate
           community.
         </p>
-
-        <div
-          class="carousel-container w-full overflow-x-scroll flex snap-x snap-mandatory space-x-4 scrollbar-hide"
-        >
-          <div
-            class="carousel-item w-full bg-white h-[200px] mt-8 snap-center flex-shrink-0"
-          ></div>
-          <div
-            class="carousel-item w-full bg-red-800 h-[200px] mt-8 snap-center flex-shrink-0"
-          ></div>
-          <div
-            class="carousel-item w-full bg-blue-700 h-[200px] mt-8 snap-center flex-shrink-0"
-          ></div>
-        </div>
-
-        <div class="flex justify-center mt-4 space-x-2 mx-auto">
-          <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
-          <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
-          <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
-        </div>
       </div>
-    </section>
+
+      <!-- Carousel -->
+      <div
+        class="carousel-container w-full h-40 md:h-60 lg:h-72 overflow-hidden flex snap-x snap-mandatory space-x-4 scrollbar-hide mt-4 "
+      >
+        <div
+          class="carousel-item w-96 h-40 md:h-60 lg:h-52 bg-white mt-0 snap-center flex-shrink-0"
+        ></div>
+        <div
+          class="carousel-item w-96 h-40 md:h-60 lg:h-52 bg-red-800 mt-0 snap-center flex-shrink-0"
+        ></div>
+        <div
+          class="carousel-item w-96 h-40 md:h-60 lg:h-52 bg-red-800 mt-0 snap-center flex-shrink-0"
+        ></div>
+        <div
+          class="carousel-item w-96 h-40 md:h-60 lg:h-52 bg-red-800 mt-0 snap-center flex-shrink-0"
+        ></div>
+        <div
+          class="carousel-item w-96 h-40 md:h-60 lg:h-52 bg-red-800 mt-0 snap-center flex-shrink-0"
+        ></div>
+        <div
+          class="carousel-item w-96 h-40 md:h-60 lg:h-52 bg-blue-700 mt-0 snap-center flex-shrink-0"
+        ></div>
+      </div>
+
+      <!-- Indicators -->
+      <div class="flex justify-center mt-4 space-x-2 mx-auto">
+        <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
+        <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
+        <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
+      </div>
+    </div>
+
     <!-- Vision mission end -->
 
-    <h1 class="text-white px-7 text-3xl font-junge italic mt-10">
+    <h1 class="text-white px-7 text-3xl font-junge italic mt-10 md:text-center">
       Meet Our Leader
     </h1>
     <!-- leader -->
-    <section class="mt-3 container py-6 px-7 bg-[#C0B7B7] font-junge">
-      <img src="./img/foto/ketua.png" alt="" class="mx-auto w-1/2" />
-      <div class="flex flex-col mt-6 gap-4">
-        <h1 class="text-2xl font-bold text-center">GIOVANNI LUMENDOW</h1>
+    <section
+      data-aos="flip-up"
+      class="mt-3 container py-6 px-7 md:px-12 md:py-8 lg:px-16 lg:py-9 bg-[#C0B7B7] font-junge max-w-full md:flex"
+    >
+      <img src="./img/foto/ketua.png" alt="" class="mx-auto w-3/4 md:w-2/6" />
+      <div class="flex flex-col mt-6 gap-5">
+        <h1 class="text-2xl font-bold text-center md:text-left md:text-4xl">
+          GIOVANNI LUMENDOW
+        </h1>
 
-        <p>
+        <p class="text-lg md:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex
         </p>
-        <p>
+        <p class="text-lg md:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex
         </p>
-        <div class="flex items-center gap-1 justify-between mx-auto">
+        <div class="flex items-center gap-1 mx-auto md:mx-0">
           <a
             href="https://youtube.com/aryaa"
             target="_blank"
@@ -168,139 +229,164 @@
     </section>
 
     <!-- latest porject -->
-    <section class="mt-3 container py-6 px-7">
-      <h1
-        class="text-white uppercase text-center text-3xl font-junge font-bold mt-0"
-      >
-        latest project
-      </h1>
-      <div
-        class="carousel-container w-full overflow-x-scroll flex snap-x snap-mandatory space-x-4 scrollbar-hide"
-      >
-        <div
-          class="carousel-item w-full bg-white h-[200px] mt-5 snap-center flex-shrink-0"
-        ></div>
-        <div
-          class="carousel-item w-full bg-red-800 h-[200px] mt-5 snap-center flex-shrink-0"
-        ></div>
-        <div
-          class="carousel-item w-full bg-blue-700 h-[200px] mt-5 snap-center flex-shrink-0"
-        ></div>
-      </div>
+    <section
+  class="mt-5 container py-6 px-7 max-w-full md:px-12 md:py-8 lg:px-16 lg:py-9 lg:flex lg:items-center lg:justify-center lg:gap-16"
+>
+  <h1
+    class="text-white uppercase text-left text-3xl font-junge font-bold mt-0 md:text-4xl  lg:max-w-xs lg:mr-8 lg:whitespace-nowrap"
+  >
+     latest project
+  </h1>
 
-      <div class="flex justify-center mt-5 space-x-2 mx-auto">
-        <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
-        <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
-        <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
-      </div>
-    </section>
+  <div
+    data-aos="zoom-in"
+    class="carousel-container w-full lg:max-w-[50%] overflow-x-scroll flex snap-x snap-mandatory space-x-4 scrollbar-hide"
+  >
+    <div class="carousel-item w-full bg-red-800 mt-3 snap-center flex-shrink-0">
+      <iframe
+        class="w-full aspect-video lg:h-[400px]"
+        src="https://www.youtube.com/embed/NSTkiyFRmgM?si=v1B-YcECCWZTjyNr"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="carousel-item w-full bg-red-800 mt-3 snap-center flex-shrink-0">
+      <iframe
+        class="w-full aspect-video lg:h-[400px]"
+        src="https://www.youtube.com/embed/XkBhavE3bFM?si=v7mdlJ33bOyeuewq"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="carousel-item w-full bg-blue-700 mt-3 snap-center flex-shrink-0">
+      <iframe
+        class="w-full aspect-video lg:h-[400px]"
+        src="https://www.youtube.com/embed/baI3BiIlqdg?si=aA-MhDWFHXIEsoie"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="flex justify-center mt-3 space-x-2 mx-auto lg:hidden">
+    <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
+    <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
+    <div class="indicator w-3 h-3 bg-red-400 rounded-full"></div>
+  </div>
+
+</section>
+
+ 
 
     <!-- our service -->
-    <section class="mt-3 container py-6 px-7">
+    <section
+      class="mt-3 container py-6 px-7 max-w-full md:px-12 md:py-8 lg:px-16 lg:py-9"
+    >
       <h1
-        class="text-white uppercase text-center text-3xl font-junge font-bold mt-0"
+        class="text-white uppercase text-center text-3xl font-junge font-bold mt-0 md:text-4xl"
       >
         our service
       </h1>
-      <div class="flex flex-col mx-auto w-full items-center mt-6 gap-10">
-        <div class="w-1/2 p-1">
+      <div
+        class="flex flex-col  w-full items-center mt-6 gap-10 lg:gap-0 lg:mx-auto md:flex-wrap lg:flex-nowrap lg:flex-row  mx-auto lg:justify-center  border-2 border-indigo-600"
+      >
+        <div class="w-1/2 p-1 lg:w-1/4" data-aos="fade-left">
           <img
             src="./img/logo/Logo WJ Group simple white.png"
             alt=""
-            class="w-full h-auto object-contain mx-auto"
+            class="w-full h-auto object-contain mx-auto md:w-1/2 "
           />
         </div>
-        <div class="w-3/4 p-1">
+        <div class="w-3/4 p-1 lg:w-1/4" data-aos="fade-right">
           <img
             src="./img/logo/Logo Gereja (1).png"
             alt=""
-            class="w-full h-auto object-contain mx-auto"
+            class="w-full h-auto object-contain mx-auto md:w-1/2 "
           />
         </div>
-        <div class="w-1/2 p-1">
+        <div class="w-1/2 p-1 lg:w-1/4" data-aos="fade-left">
           <img
             src="./img/logo/PRBK Logo.png"
             alt=""
-            class="w-full h-auto object-contain mx-auto"
+            class="w-full h-auto object-contain mx-auto md:w-1/2 "
           />
         </div>
       </div>
     </section>
 
     <!-- footer -->
-    <section class="mt-3 container py-6 px-7 bg-[#C0B7B7] font-junge">
-      <img src="./img/logo/Logo_Full Logo Black.png" alt="" class="w-3/4" />
-      <div class="flex flex-col md:flex-row md:justify-between gap-4">
+     <section class="mt-3 container py-6 px-7 bg-[#C0B7B7] font-junge max-w-full md:px-12 md:py-8 lg:px-16 lg:py-9 lg:justify-between">
+  <img src="./img/logo/Logo_Full Logo Black.png" alt="" class="w-3/4 md:w-2/6 mx-auto md:mx-0 lg:w-1/5" />
+  <div class="flex flex-col md:flex-row md:gap-14 md:items-start mt-6 ">
+    
+    <!-- More Info Section -->
+    <div class="block mt-4 lg:mt-1 w-full md:w-1/3">
+      <div class="flex items-center justify-between">
+        <p class="font-bold text-lg md:text-2xl">More Info</p>
         <div
-          class="block mt-7 md:flex-col md:items-start md:gap-5 md:justify-start"
-        >
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-lg">More Info</p>
-            <div
-              class="w-[35px] h-[35px] border-[3px] border-black rounded-full flex items-center justify-center cursor-pointer md:hidden toggleArrow"
-            >
-              <img src="./img/down.svg" alt="" class="w-4 h-4" />
-            </div>
-          </div>
-          <div
-            class="hidden flex-col gap-2 transition-all duration-300 ease-in-out md:flex companyDetails"
-          >
-            <p>+62 411334080</p>
-            <p>gia@example.com</p>
-            <p>
-              Jl. G. Salahutu No.13, Lariang Bangi, Kec. Makassar, Kota
-              Makassar, Sulawesi Selatan 90144
-            </p>
-          </div>
-        </div>
-
-        <!-- Duplikat berikut -->
-        <div
-          class="block mt-4 md:flex-col md:items-start md:gap-5 md:justify-start"
-        >
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-lg">Social Media</p>
-            <div
-              class="w-[35px] h-[35px] border-[3px] border-black rounded-full flex items-center justify-center cursor-pointer md:hidden toggleArrow"
-            >
-              <img src="./img/down.svg" alt="" class="w-4 h-4" />
-            </div>
-          </div>
-          <div
-            class="hidden flex-col gap-2 transition-all duration-300 ease-in-out md:flex companyDetails"
-          >
-            <div class="flex items-center gap-4 mt-3">
-              <img src="./img/youtube.svg" alt="" />
-              <img src="./img/instagram.svg" alt="" />
-              <img src="./img/x.svg" alt="" />
-              <img src="./img/linkedin.svg" alt="" />
-            </div>
-            <p>@2024 Team Production</p>
-          </div>
-        </div>
-
-        <!-- Duplikat berikut -->
-        <div
-          class="block mt-4 md:flex-col md:items-start md:gap-5 md:justify-start"
-        >
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-lg">Connection</p>
-            <div
-              class="w-[35px] h-[35px] border-[3px] border-black rounded-full flex items-center justify-center cursor-pointer md:hidden toggleArrow"
-            >
-              <img src="./img/down.svg" alt="" class="w-4 h-4" />
-            </div>
-          </div>
-          <div
-            class="hidden flex-col gap-2 transition-all duration-300 ease-in-out md:flex companyDetails"
-          >
-            <p>Associated with</p>
-            <img src="./img/logo/Logo_GIA Logo Black.png" alt="" class="w-3/4" />
-          </div>
+          class="w-[35px] h-[35px] border-[3px] border-black rounded-full flex items-center justify-center cursor-pointer md:hidden toggleArrow">
+          <img src="./img/down.svg" alt="" class="w-4 h-4 md:hidden" />
         </div>
       </div>
-    </section>
+      <div class="hidden flex-col transition-all duration-300 ease-in-out md:flex companyDetails md:text-lg mt-2 lf:">
+        <p>+62 411334080</p>
+        <p>gia@example.com</p>
+        <p>Jl. G. Salahutu No.13, Lariang Bangi, Kec. Makassar, Kota Makassar, Sulawesi Selatan 90144</p>
+      </div>
+    </div>
 
+    <!-- Social Media Section -->
+    <div class="block mt-4 w-full md:w-1/3">
+      <div class="flex items-center justify-between">
+        <p class="font-bold text-lg md:text-2xl">Social Media</p>
+        <div
+          class="w-[35px] h-[35px] border-[3px] border-black rounded-full flex items-center justify-center cursor-pointer md:hidden toggleArrow">
+          <img src="./img/down.svg" alt="" class="w-4 h-4" />
+        </div>
+      </div>
+      <div class="hidden flex-col gap-2 transition-all duration-300 ease-in-out md:flex companyDetails mt-2">
+        <div class="flex items-center gap-4">
+          <img src="./img/youtube.svg" alt="" />
+          <img src="./img/instagram.svg" alt="" />
+          <img src="./img/x.svg" alt="" />
+          <img src="./img/linkedin.svg" alt="" />
+        </div>
+        <p class="md:text-lg mt-2">@2024 Team Production</p>
+      </div>
+    </div>
+
+    <!-- Connection Section -->
+    <div class="block mt-4 w-full md:w-1/3">
+      <div class="flex items-center justify-between">
+        <p class="font-bold text-lg md:text-2xl">Connection</p>
+        <div
+          class="w-[35px] h-[35px] border-[3px] border-black rounded-full flex items-center justify-center cursor-pointer md:hidden toggleArrow">
+          <img src="./img/down.svg" alt="" class="w-4 h-4" />
+        </div>
+      </div>
+      <div class="hidden flex-col gap-2 transition-all duration-300 ease-in-out md:flex companyDetails md:text-lg mt-2">
+        <p>Associated with</p>
+        <img src="./img/logo/Logo_GIA Logo Black.png" alt="" class="w-2/4 md:w-5/6 lg:w-1/2" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

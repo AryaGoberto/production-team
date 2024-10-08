@@ -3,5 +3,6 @@
     "statusBar.background": "#7700ff",
     "statusBar.noFolderBackground": "#ca0000",
     "statusBar.debuggingBackground": "#00aaff"
-  }
+  },
+  "liveServer.settings.port": 5501
 }

@@ -19,3 +19,22 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.responsive-iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Untuk menjaga rasio video tetap 16:9 */
+  }
+
+  /* Media query untuk perangkat dengan layar lebih kecil dari tablet (mobile) */
+  @media (max-width: 768px) {
+    .responsive-iframe {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  body, html {
+  overflow-x: hidden;
+}
+
+
